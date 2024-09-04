@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<!--To import Tag Helper-->
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -21,11 +24,35 @@
     @*Start Header*@
     <section class="d-flex justify-content-evenly container flex-column  vh-100  ">
         <div class="">
+            <!-- HTML TAG-->
+           <!--
+                <a href="/Home/Index" class=" btn btn-danger">Home</a>
+             <a href="/Home/Contact" class=" btn btn-success">Contact Us</a>
+             <a href="/Home/About" class="btn btn-warning">About Us</a>
+             <a href="/Home/Privacy" class=" btn btn-dark">Privacy</a>
 
-            <a href="/Home/Index" class=" btn btn-danger">Home</a>
-            <a href="/Home/Contact" class=" btn btn-success">Contact Us</a>
-            <a href="/Home/About" class="btn btn-warning">About Us</a>
-            <a href="/Home/Privacy" class=" btn btn-dark">Privacy</a>
+           --> 
+
+            <!-- HTML Helper -->
+            <!-- @Html.ActionLink("Text On Anchor", "Name Action", "NameController", "Value Attributes", "Classes");-->
+          @*
+
+          @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("About Us", "About", "Home", null, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Privacy", "Privacy", "Home", null, new { @class = "btn btn-dark" })
+          *@
+            
+          <!-- Tag Helper-->
+              <a asp-controller="Home" asp-action="Index"  class=" btn btn-danger">Home</a>
+              <a asp-controller="Home" asp-action="Contact" class=" btn btn-success">Contact Us</a>
+              <a asp-controller="Home" asp-action="About" class="btn btn-warning">About Us</a>
+              <a asp-controller="Home" asp-action="Privacy" class=" btn btn-dark">Privacy</a>
+
+           
+
+
+
         </div>
         @*End Header*@
 
