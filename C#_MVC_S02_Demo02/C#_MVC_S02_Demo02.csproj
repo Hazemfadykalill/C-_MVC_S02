@@ -2,7 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>C__MVC_S02_Demo</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>C__MVC_S02_Demo02</RootNamespace>
   </PropertyGroup>
 
 </Project>
