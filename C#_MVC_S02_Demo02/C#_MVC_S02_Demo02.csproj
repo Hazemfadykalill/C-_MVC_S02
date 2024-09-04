@@ -7,4 +7,10 @@
     <RootNamespace>C__MVC_S02_Demo02</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Lib\" />
+    <Folder Include="wwwroot\CSS\" />
+    <Folder Include="wwwroot\JS\" />
+  </ItemGroup>
+
 </Project>
