@@ -21,8 +21,10 @@ namespace C__MVC_S02_Demo02
             app.MapControllerRoute
                 (
                 name: "Default",
-               // pattern: "/controller/action/id"//static
-                pattern: "/{controller}/{action}/{id}"//static
+                pattern: "/controller/action/id"//static
+               //pattern: "/{controller}/{action}/{id}"//static
+               //pattern: "/{controller=Movies}/{action=GetMovies}/{id=1}"//Constraint 
+               // pattern: "/{controller=Movies}/{action=GetMovies}/{id:int?}"//Constraint 
                 );
 
             app.Run();
